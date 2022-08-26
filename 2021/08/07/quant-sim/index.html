@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Simulating quantum mechanics by quantum computer has gained much attention. This review summarized several digital quantum simulation approaches, including product formula, quantum walk, varational pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Quantum simulation">
+<meta property="og:url" content="http://example.com/2021/08/07/quant-sim/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Simulating quantum mechanics by quantum computer has gained much attention. This review summarized several digital quantum simulation approaches, including product formula, quantum walk, varational pr">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-08-07T03:28:00.000Z">
+<meta property="article:modified_time" content="2021-08-30T02:43:00.000Z">
+<meta property="article:author" content="Mas">
+<meta property="article:tag" content="Quantum">
+<meta property="article:tag" content="Paper">
+<meta property="article:tag" content="Note">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2021/08/07/quant-sim/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/08/07/quant-sim/","path":"2021/08/07/quant-sim/","title":"Quantum simulation"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Quantum simulation | Hexo</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#digital-analog-simulation"><span class="nav-number">2.</span> <span class="nav-text">Digital &amp; Analog simulation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#product-formula"><span class="nav-number">3.</span> <span class="nav-text">Product formula</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#hamiltonian-decomposition"><span class="nav-number">3.1.</span> <span class="nav-text">Hamiltonian decomposition</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#hamiltonian-recombination"><span class="nav-number">3.2.</span> <span class="nav-text">Hamiltonian recombination</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#quantum-walk"><span class="nav-number">4.</span> <span class="nav-text">Quantum walk</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#query-lower-bound"><span class="nav-number">4.1.</span> <span class="nav-text">Query lower bound</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#childs-quantum-walk"><span class="nav-number">4.2.</span> <span class="nav-text">Childs quantum walk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#quantum-simulation-by-quantum-walk"><span class="nav-number">4.3.</span> <span class="nav-text">Quantum simulation by quantum walk</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#implementing-function-h"><span class="nav-number">4.4.</span> <span class="nav-text">Implementing function \(h\)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#variational-methods"><span class="nav-number">5.</span> <span class="nav-text">Variational methods</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#algebra-methods"><span class="nav-number">6.</span> <span class="nav-text">Algebra methods</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#fixed-depth-simulation-by-cartan-decomposition"><span class="nav-number">6.1.</span> <span class="nav-text">Fixed depth simulation by Cartan decomposition</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mas</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/08/07/quant-sim/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mas">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Quantum simulation | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Quantum simulation
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-08-07 11:28:00" itemprop="dateCreated datePublished" datetime="2021-08-07T11:28:00+08:00">2021-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-08-30 10:43:00" itemprop="dateModified" datetime="2021-08-30T10:43:00+08:00">2021-08-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Science/" itemprop="url" rel="index"><span itemprop="name">Science</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Simulating quantum mechanics by quantum computer has gained much attention. This review summarized several digital quantum simulation approaches, including product formula, quantum walk, varational principles and algebraic methods.</p>
+<span id="more"></span>
+<h1 id="introduction">Introduction</h1>
+<p>Simulating quantum mechanics, e.g. solving the Schrödinger equation on time-independent Hamiltonian <span class="math inline">\(H\)</span>: <span class="math display">\[
+i\hbar \frac{d}{dt} |\psi \rangle =H|\psi \rangle 
+\]</span> is known to be a computationally hard problem due to <em>exponential explosion</em> back in 1980s. Approximation methods such as Monte Carlo algorithm (<a target="_blank" rel="noopener" href="https://www.worldscientific.com/worldscibooks/10.1142/2262">Suzuki, 1993</a>) only works on well-behaved problems, which discourages practical usage.</p>
+<p>The notion of simulating qauntum mechanics by <em>quantum computer</em> was envisioned by Feynman (<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/BF02650179">1982</a>). In fact, quantum computer was shown to have universal capability (<a target="_blank" rel="noopener" href="https://science.sciencemag.org/content/273/5278/1073">Lloyd, 1996</a>). However, as for simulating a problem-specific machine (e.g., a simple system with partial control that mimics a larger system in an analog way) rather than a universal quantum computer may be sufficient. Therefore practical qauntum simulation may come to reality way before a univeral quantum computer.</p>
+<p>Recently quantum simulation has gained more and more attention due to its potential applications in, e.g., condensed-matter physics, high-energy physics, atomic physics, quantum chemistry, and cosmology, as well as due to the advances in the coherent manipulation of quantum systems that promise practical quantum simulation in near future.</p>
+<h1 id="digital-analog-simulation">Digital &amp; Analog simulation</h1>
+<p>One approach to simulate quantum system is based on the well-known circuit model, which is usually referred to as <em>digital quantum simulation</em>. Digital quantum simulation consists of 3 steps: 1. initial state preperation: encode the wave function using computational basis; 2. evolution unitary implementation: by application of a sequence of single- or two qubits gates; 3. final measurement: decode and extract information.</p>
+<p>Note that the advantage of quantum simulator over classical can only be exhibited when each of the three steps is realized efficiently, i.e., using polynomial resources. Actually these are not easy tasks.</p>
+<p>Another approach is <em>analog quantum simulation</em>, where one quantum system mimics another. This can be done if there exists a mapping <span class="math inline">\(f\)</span> between the system and the simulator:</p>
+<p><span class="math display">\[
+\begin{aligned}
+|\psi _{sim}( 0) \rangle  &amp; =f|\psi _{sys}( 0) \rangle \\
+|\psi _{sys}( t) \rangle  &amp; =f^{-1} |\psi _{sim}( t) \rangle \\
+H_{sim} &amp; =fH_{sys} f^{-1} .
+\end{aligned}
+\]</span></p>
+<p>See Georgescu et al. (<a target="_blank" rel="noopener" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.86.153">2014</a>)'s review for more on this topic.</p>
+<p>The following sections summarize several methods for implementing evoluntion unitary in digital quantum simulation.</p>
+<h1 id="product-formula">Product formula</h1>
+<p>The product formula approach is to approximate <span class="math inline">\(e^{-iHt}\)</span> in two steps: 1. Hamiltonian decompostion: decompose <span class="math inline">\(H = \sum_{l=1}^{L}H_l\)</span>, where each <span class="math inline">\(H_l\)</span> is easy to simulate; 2. Hamiltonian recombination: combine <span class="math inline">\(e^{-iH_lt}\)</span>s to get an approximation of <span class="math inline">\(e^{-iHt}\)</span>.</p>
+<p>The algorithm of this type has circuit complexity <span class="math inline">\(ploy(t,1/\varepsilon)\)</span>.</p>
+<p>TODO: improvements: https://arxiv.org/abs/1907.11679</p>
+<h2 id="hamiltonian-decomposition">Hamiltonian decomposition</h2>
+<p><strong>Local Hamiltonian</strong>. A large class of Hamiltonians (e.g., Hubbard, Ising and Heisenberg model) can be decomposed as a sum of local interactions, as considered by Lloyd (<a target="_blank" rel="noopener" href="https://science.sciencemag.org/content/273/5278/1073">1996</a>). Each local interaction acts non-trivially on a small subsystem and can thus be simulated more easily. For example, in many physical model the Hamiltonian can be written as a sum of Pauli strings, and a <span class="math inline">\(k\)</span>-local Pauli string can be simulated using <span class="math inline">\(2k\)</span> <span class="math inline">\(CNOT\)</span>s, a <span class="math inline">\(Rz\)</span> that acts on an ancilla qubit, and several other primitive single qubit gates (see, e.g., <a target="_blank" rel="noopener" href="https://journals.aps.org/rmp/abstract/10.1103/RevModPhys.86.153">Georgescu's review</a>).</p>
+<p><strong>Sparse Hamiltonian</strong>. Simulating local Hamiltonians was later generalized by Aharonov et al. (<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/10.1145/780542.780546">2003</a>) into simulating spase Hamiltonians. In this setting, the Hamiltonian <span class="math inline">\(H\)</span> is accessed by an oracle, e.g., an oracle <span class="math inline">\(f\)</span> that on inputing a row index <span class="math inline">\(i\)</span> and an positive interger <span class="math inline">\(j\)</span>, outputs the column index and the value of the <span class="math inline">\(j\)</span>-th non-zero element in the <span class="math inline">\(i\)</span>-th row. In a quantum circuit, this oracle is realized by a unitary <span class="math inline">\(U_f\)</span> such that <span class="math inline">\(U_f|i,j,0\rangle = |i,j,f(i,j)\rangle\)</span>.</p>
+<p>To decompose sparse Hamiltonians, it is common to consider the <em>graph of the Hamiltonian</em>. A Hamiltonian can be thought of as an adjacency matrix of a graph. The undirected graph formed by connecting two vertices if and only if the edge between them has nonzero weight (possibly complex weight) is called the graph of the Hamiltonian. Note that the graph of a <span class="math inline">\(d\)</span>-<em>sparse</em> Hamiltonian (each row and column has at most <span class="math inline">\(d\)</span> nonzero elements) has maximum degree <span class="math inline">\(d\)</span>.</p>
+<p>Some graphs are easy to simulate. For example, graphs with maximum degree one such as Pauli strings. Berry et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/quant-ph/0508139">2006</a>) decompose a <span class="math inline">\(d\)</span>-sparse Hamiltonian of dimension <span class="math inline">\(N\)</span> into <span class="math inline">\(6d^2\)</span> 1-sparse Hamiltonians, each can be simulated by making <span class="math inline">\(O(\log^*N)\)</span> queries.</p>
+<p>Galaxies (forest of stars) are also easy to simulate. Childs et al. (<a target="_blank" rel="noopener" href="http://arxiv.org/abs/1003.3683v2">2010</a>) decompose the <span class="math inline">\(d\)</span>-sparse Hamiltonian into <span class="math inline">\(6d\)</span> galaxies, and each galaxy can be simulated by making <span class="math inline">\(O(d+\log^*N)\)</span> queries.</p>
+<p>Here the function <span class="math inline">\(\log^*\)</span> is defined by <span class="math inline">\(\log^*N=0\)</span> if <span class="math inline">\(0&lt;N\leq 1\)</span> and <span class="math inline">\(\log^*N=1+\log^*\log N\)</span> if <span class="math inline">\(N&gt;1\)</span>.</p>
+<h2 id="hamiltonian-recombination">Hamiltonian recombination</h2>
+<p>Suppose <span class="math inline">\(H = \sum_{l=1}^{L}H_l\)</span> and each <span class="math inline">\(e^{-iH_lt}\)</span> can be approximated with high precision. The evolution of <span class="math inline">\(H\)</span> cannot be obtained by multiplying each <span class="math inline">\(e^{-iH_lt}\)</span> unless <span class="math inline">\(\{H_l\}\)</span> commutes.</p>
+<p>The <em>Trotter-Suzuki decompostion</em> gives an approximation of the evolution unitary by product of evolution of each local interaction. The <em>Suzuki formula</em> of the <span class="math inline">\(n\)</span>-th order <span class="math inline">\(S_m\)</span> gives the <span class="math inline">\(m\)</span>-th order approximation of the exponential: <span class="math display">\[
+\begin{aligned}
+S_{1}( \lambda ) &amp; :=\prod _{l=1}^{L} e^{i\lambda H_{l}} =e^{i\lambda H} +O\left( \lambda ^{2}\right) ,\\
+S_{2}( \lambda ) &amp; :=\prod _{l=1}^{L} e^{i\frac{\lambda }{2} H_{l}}\prod _{k=L}^{1} e^{i\frac{\lambda }{2} H_{k}} =e^{i\lambda H} +O\left( \lambda ^{3}\right) .
+\end{aligned}
+\]</span></p>
+<p>The first order formula <span class="math inline">\(S_1(\lambda)\)</span> is also known as <em>Trotter formula</em> or <em>Lie product formula</em>. Suzuki proved in his thesis (<a target="_blank" rel="noopener" href="https://aip.scitation.org/doi/10.1063/1.529425">1991</a>) that the <span class="math inline">\((2k-1)\)</span>-th order formula is equivalent to the <span class="math inline">\(2k\)</span>-th formula, i.e., <span class="math display">\[
+S_{2k-1}(\lambda) = S_{2k}(\lambda) + O(\lambda ^{2k+1}) .
+\]</span></p>
+<p>Suzuki also gives a recursive method to define higher order formula, i.e., using a composition of low order formulas with controllable coefficients to cancel high order terms, much similar to Runge-Kutta method in numerical analysis. One way (given by Suzuki) to define the <span class="math inline">\(2k\)</span>-th formula is <span class="math display">\[
+S_{2k}( \lambda ) :=S_{2k-2}( p_{k} \lambda )^{2} S_{2k-2}((1-4p_k) \lambda) S_{2k-2} ( p_{k} \lambda )^{2},\ \text{where}\ p_{k} =\left( 4-4^{\frac{1}{2k-1}}\right)^{-1} .
+\]</span></p>
+<p>Finally, the evolution at time <span class="math inline">\(t\)</span> can thus be approximated by dividing <span class="math inline">\(t\)</span> into <span class="math inline">\(r\)</span> steps: <span class="math display">\[
+e^{itH} =S_{m}\left(\frac{t}{r}\right)^{r} +O\left(\frac{t^{m+1}}{r^{m}}\right) .
+\]</span></p>
+<p>The number of exponentials in a <span class="math inline">\(2k\)</span>-th order Trotter-Suzuki decompositon is <span class="math inline">\(O(L5^kt(t/\varepsilon)^{1/2k})\)</span>. This bound is made precise by Berry et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/quant-ph/0508139">2006</a>) to be <span class="math display">\[
+N_{exp} \leqslant 5^{2k} L^{2} \| H\| t\left(\frac{L\| H\| t}{\varepsilon }\right)^{1/2k}
+\]</span> where <span class="math inline">\(\Vert H\Vert\)</span> is the spectral norm of <span class="math inline">\(H\)</span>.</p>
+<p>Several attempts on improving Trotter-Suzuki decomposition have been made.</p>
+<p>Zhang et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2011.05283">2020</a>) proposed an adaptive version of product formula, where each evolution term in <span class="math display">\[
+\prod _{l=1}^{L} e^{i\lambda H_{l}}
+\]</span> is selected in a heuristic way, thus reducing circuit depth. Suppose the current selected terms are <span class="math inline">\(\{O_1,\cdots,O_n\}\subseteq \{H_l\}\)</span>, then the approximation error <span class="math display">\[
+\begin{aligned}
+\varepsilon  &amp; =\| e^{-iH\delta t} |\psi ( t) \rangle -\prod _{j=1}^{n} e^{-iO_{j} \lambda _{j} \delta t} |\psi ( t) \rangle \| \\
+ &amp; =\delta t\left( \langle H^{2} \rangle +\sum _{jj&#39;} A_{jj&#39;} \lambda _{j} \lambda _{j&#39;} -2\sum _{j} C_{j} \lambda _{j}\right) +O\left( \delta t^{2}\right)
+\end{aligned}
+\]</span> where <span class="math inline">\(A_{jj&#39;} =Re( \langle O_{j} O_{j&#39;} \rangle ), C_{j} =Re( \langle HO_{j} \rangle )\)</span> can be efficiently evaluated.</p>
+<p>In the thesis of Jones et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1904.01336.pdf">2019</a>), the coefficients in Suzuki formula is optimised using evolutionary strategies.</p>
+<h1 id="quantum-walk">Quantum walk</h1>
+<p>The best known algorithm for simulating sparse Hamiltonian is based on <em>Childs quantum walk</em> (<a target="_blank" rel="noopener" href="https://link.springer.com/article/10.1007/s00220-009-0930-1">2009</a>, <a target="_blank" rel="noopener" href="https://dl.acm.org/doi/10.5555/2231036.2231040">2012</a>), which extends the <em>Szegedy walk</em> (<a target="_blank" rel="noopener" href="http://arxiv.org/abs/quant-ph/0401053">2004</a>). Compared to product formula based algorithms whose query complexity is nearly linear with regard to <span class="math inline">\(t\)</span> and <span class="math inline">\(poly(1/\varepsilon)\)</span> in terms of <span class="math inline">\(\varepsilon\)</span>, the best algorithm based on quantum walk achieves query complexity <span class="math inline">\(O(\tau + \log(1/\varepsilon)/\log\log(\varepsilon))\)</span>, where <span class="math inline">\(\tau:=d\| H\| _{\max} t\)</span> depends on sparsity <span class="math inline">\(d\)</span>, the largest element of <span class="math inline">\(H\)</span> and time <span class="math inline">\(t\)</span>.</p>
+<h2 id="query-lower-bound">Query lower bound</h2>
+<p>Berry et al. (<a target="_blank" rel="noopener" href="https://dl.acm.org/doi/abs/10.1145/3313276.3316386">2014</a>) proved a query lower bound scaling in error as <span class="math inline">\(\varepsilon\)</span> of <span class="math inline">\(\Omega(\log\varepsilon/\log\log\varepsilon)\)</span>. In another <a href="ttps://arxiv.org/abs/1501.01715">thesis</a> a year later, they proved an extension of the <em>no fast foward theorem</em> (<a target="_blank" rel="noopener" href="http://dx.doi.org/10.1007/s00220-006-0150-x">2007</a>) that gives a query complexity scaling in <span class="math inline">\(\tau\)</span> (instead of <span class="math inline">\(t\)</span> in the no fast forward theorem) as <span class="math inline">\(\Omega (\tau)\)</span>.</p>
+<p>The optimal additive lower bound <span class="math inline">\(\Omega(\tau + \log\varepsilon/\log\log\varepsilon)\)</span> was finally achieved by Low et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.02685">2017</a>).</p>
+<h2 id="childs-quantum-walk">Childs quantum walk</h2>
+<p>Quantum walk is defined analogous to classical random walk, or Markov chains. A quantum walk with <span class="math inline">\(N\)</span> states is specified by a <span class="math inline">\(N\times N\)</span> Hermitian <span class="math inline">\(H\)</span>. The <em>continious quantum walk</em> is obtained by the schrödinger equation. The <em>discrete quantum walk</em>, however, can only be defined on an enlarged state space. Specificly, the Hilbert space <span class="math inline">\(\mathbb{C}^N\)</span> is extended to <span class="math inline">\(\mathbb{C}^{2N\times 2N}\)</span>.</p>
+<p>The Hamiltonian <span class="math inline">\(H\)</span> of sparsity <span class="math inline">\(d\)</span> is accessed by two oracle <span class="math inline">\(O_{H} ,O_{F}\)</span>, where <span class="math inline">\(O_{H}\)</span> accepts <span class="math inline">\(( j,k) \in [ N] \times [ N]\)</span> and outputs <span class="math inline">\(H_{jk}\)</span>, and <span class="math inline">\(O_{F}\)</span> accepts <span class="math inline">\(( j,l) \in [ N] \times [ d]\)</span> and output the <span class="math inline">\(l\)</span>th nonzero element in the <span class="math inline">\(j\)</span>th row of <span class="math inline">\(H\)</span>. With <span class="math inline">\(O( 1)\)</span> query to <span class="math inline">\(O_{H} ,O_{F}\)</span>, one can implement an isometry <span class="math inline">\(T\)</span> such that <span class="math display">\[
+T|j\rangle = |j\rangle \otimes \left(\sqrt{\frac{\varepsilon }{\| H\| _{1}}}\sum _{k=1}^{N}\sqrt{H_{jk}^{*}} |k\rangle |0\rangle +\sqrt{1-\frac{\varepsilon \sigma _{j}}{\| H\| _{1}}} |\zeta _{j} \rangle |1\rangle \right) ,
+\]</span> where <span class="math inline">\(\varepsilon \in ( 0,1]\)</span> is a parameter that can be made small to obtain a <em>lazy quantum walk</em>, <span class="math inline">\(\sqrt{H_{jk}^{*}}\)</span> is chosen such that <span class="math inline">\(\sqrt{H_{kj}^{*}}\left(\sqrt{H_{jk}^{*}}\right)^{*} =H_{jk}\)</span>, <span class="math inline">\(|\zeta _{j} \rangle\)</span> is some superposition of <span class="math inline">\(|k\rangle\)</span>, <span class="math inline">\(\sigma _{j} :=\sum _{k=1}^{M} |H_{jk} |\)</span>, <span class="math inline">\(\| H\| _{1} :=\max_{j} \sigma _{j}\)</span>.</p>
+<p>A swap <span class="math inline">\(S\)</span> such that <span class="math inline">\(S|j\rangle |k\rangle =|k\rangle |j\rangle\)</span> can be implemented easily. Note that <span class="math inline">\(T|j\rangle\)</span> is choosen such that <span class="math display">\[
+\langle j|T^{\dagger } ST|k\rangle =\frac{\varepsilon }{\| H\| _{1}} H_{jk}
+\]</span></p>
+<p>The quantum walk operator is defined to be <span class="math display">\[
+W:=iS\left( 2TT^{\dagger } -I\right).
+\]</span></p>
+<h2 id="quantum-simulation-by-quantum-walk">Quantum simulation by quantum walk</h2>
+<p>Let <span class="math inline">\(\lambda\)</span> be an eigenvalue of <span class="math inline">\(H\)</span>, and <span class="math inline">\(|\lambda \rangle\)</span> the corresponding eigenvector. <span class="math inline">\(T\)</span> maps <span class="math inline">\(|\lambda \rangle\)</span> into the combination of two eigenvectors of <span class="math inline">\(W\)</span>: <span class="math display">\[
+T|\lambda \rangle =\frac{|\lambda _{+} \rangle +|\lambda _{-} \rangle }{\sqrt{2}} ,
+\]</span> and <span class="math inline">\(W|\lambda _{\pm } \rangle =e^{i\theta _{\pm }} |\lambda _{\pm } \rangle\)</span>, <span class="math display">\[
+\theta _{\pm } =\pm \arcsin\left(\frac{\lambda }{d\| H\| _{\max}}\right) +( 1\mp 1)\frac{\pi }{2} .
+\]</span></p>
+<p>Quantum simulation by quantum walk can be summarized as the process below: <span class="math display">\[
+|\lambda \rangle \xrightarrow{T}\frac{|\lambda _{+} \rangle +|\lambda _{-} \rangle }{\sqrt{2}}\xrightarrow{U_h} \frac{e^{ih( \theta _{+})} |\lambda _{+} \rangle +e^{ih( \theta _{-})} |\lambda _{-} \rangle }{\sqrt{2}}\rightarrow e^{-i\lambda t} |\lambda \rangle
+\]</span> with function <span class="math inline">\(h(\theta)=-\tau\sin\theta=-d\| H\| _{\max} t\sin \theta\)</span>.</p>
+<h2 id="implementing-function-h">Implementing function <span class="math inline">\(h\)</span></h2>
+<p>Berry et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1501.01715">2015</a>) used <em>Linear Combination of Unitaries (LCU)</em> algorithm to obtain a linear combination of <span class="math inline">\(W^1,W^2,\cdots,W^N\)</span>, which approximates <span class="math inline">\(h\)</span>. This method has a major drawback: success probability decays with <span class="math inline">\(N\)</span>. Moreover, the query complexity is <span class="math inline">\(O(\tau \log\varepsilon/\log\log\varepsilon)\)</span> which is not optimal.</p>
+<p>Low et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1606.02685">2017</a>) proposed <em>Quantum Signal Processing</em> algorithm and achieved query lower bound <span class="math inline">\(O(\tau + \log\varepsilon/\log\log\varepsilon)\)</span> without success probabilty decay. In general, given a odd periodic function <span class="math inline">\(h: (\pi,\pi]\rightarrow(\pi,\pi]\)</span>, the quantum signal processing algorithms transform an unitary <span class="math display">\[
+W=\sum_\lambda e^{i\theta_\lambda}|\lambda\rangle\langle\lambda|\rightarrow V=\sum_\lambda e^{ih(\theta_\lambda)}|\lambda\rangle\langle\lambda|.
+\]</span> with precision <span class="math inline">\(\varepsilon\)</span> and success probability <span class="math inline">\(1-O(\varepsilon)\)</span>. The query complexity of the signal processing algorithm depends on the Fourier decomposition of <span class="math inline">\(h\)</span>.</p>
+<h1 id="variational-methods">Variational methods</h1>
+<p><em>Varational Quantum Algorithm (VQA)</em> use low depth quantum circuits as a subroutine in a larger classical optimisation and have been applied broadly, including to binary optimisation problems, training machine learning models, and obtaining energy spectra. VQA is a quantum analog of classical machine learning methods, as it employs parametrized quantum circuits on quantum computers and leverages classical optimization toolbox for parameter optimizations. Cerezo et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/2012.09265">2020</a>) reviewed VQA and its various applications.</p>
+<p>https://doi.org/10.1038/s41534-021-00452-9 intro-p2</p>
+<p><em>Varational Quantum Simulation (VQS)</em> essentially approximates evolution unitary <span class="math inline">\(e^{-iHt}\)</span> by a parametrized quantum circuit (or an <em>ansatz</em>) where the evolution of parameters in time <span class="math inline">\(t\)</span> is determined by classical varational principles. Concretely, a first-order ode of parameters, whose coefficients can be efficiently determined by Hadamard test, is induced by varational principles. Yuan et al. (<a target="_blank" rel="noopener" href="https://arxiv.org/abs/1812.08767">2018</a>) studied the performance of different varational principles on different system (pure or mixed) and different evolution (real time and imaginary time).</p>
+<p>One obstacle is the lack of knowledge on contructing ansatz, which drastically affects the performance of simulation. In the inital work of Li et al. (<a target="_blank" rel="noopener" href="https://journals.aps.org/prx/abstract/10.1103/PhysRevX.7.021050">2017</a>), the algorithm error is evaluated to be <span class="math display">\[
+O\left(\left(\sqrt{\Delta_{\max}^{(2)}} + \sqrt{\delta t\Delta_{\max}^{(3)}}\right)T\right)
+\]</span> where <span class="math inline">\(\Delta^{(2)}\)</span> and <span class="math inline">\(\Delta^{(3)}\)</span> depend on the ansatz and <span class="math inline">\(H\)</span>, thus a poorly designed ansatz leads to an linear error scaling in time <span class="math inline">\(T\)</span> with large coefficient.</p>
+<p>Beside being sufficiently expressive, an ansatz must meet other practical concerns including hardware limitations (restricted qubit connectivity and practical limits on circuit depth due to experimental noise) as well as optimisation considerations (the number of optimisation parameters must not be too large)</p>
+<h1 id="algebra-methods">Algebra methods</h1>
+<h2 id="fixed-depth-simulation-by-cartan-decomposition">Fixed depth simulation by Cartan decomposition</h2>
+<p>TODO.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Quantum/" rel="tag"># Quantum</a>
+              <a href="/tags/Paper/" rel="tag"># Paper</a>
+              <a href="/tags/Note/" rel="tag"># Note</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/08/15/bypass-gfw/" rel="next" title="Bypassing GFW">
+                  Bypassing GFW <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mas</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

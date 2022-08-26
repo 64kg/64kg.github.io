@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="Summary of contextual subspace VQE, how it divide a Hamiltonian into classical and non-classical parts, how to evaluate the classical part, and how to reduce qubit requirements for the non-classical p">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Contextual subspace VQE">
+<meta property="og:url" content="http://example.com/2021/10/16/contextual-vqe/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="Summary of contextual subspace VQE, how it divide a Hamiltonian into classical and non-classical parts, how to evaluate the classical part, and how to reduce qubit requirements for the non-classical p">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/attach/stjcc.png">
+<meta property="og:image" content="http://example.com/attach/t1mp0.png">
+<meta property="og:image" content="http://example.com/attach/3ign3.png">
+<meta property="og:image" content="http://example.com/attach/qot79.png">
+<meta property="article:published_time" content="2021-10-16T09:40:00.000Z">
+<meta property="article:modified_time" content="2021-10-17T11:34:00.000Z">
+<meta property="article:author" content="Mas">
+<meta property="article:tag" content="Quantum">
+<meta property="article:tag" content="Paper">
+<meta property="article:tag" content="Note">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/attach/stjcc.png">
+
+
+<link rel="canonical" href="http://example.com/2021/10/16/contextual-vqe/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/10/16/contextual-vqe/","path":"2021/10/16/contextual-vqe/","title":"Contextual subspace VQE"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Contextual subspace VQE | Hexo</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#merminperes-magic-square"><span class="nav-number">2.</span> <span class="nav-text">Mermin–Peres magic square</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#measurement-contextuality"><span class="nav-number">3.</span> <span class="nav-text">Measurement contextuality</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#noncontextual-hamiltonian"><span class="nav-number">4.</span> <span class="nav-text">Noncontextual Hamiltonian</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#contextual-subspace-vqe"><span class="nav-number">5.</span> <span class="nav-text">Contextual subspace VQE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#how-contextual-can-a-hamiltonian-be"><span class="nav-number">6.</span> <span class="nav-text">How contextual can a Hamiltonian be</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mas</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/10/16/contextual-vqe/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mas">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Contextual subspace VQE | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Contextual subspace VQE
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-10-16 17:40:00" itemprop="dateCreated datePublished" datetime="2021-10-16T17:40:00+08:00">2021-10-16</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-10-17 19:34:00" itemprop="dateModified" datetime="2021-10-17T19:34:00+08:00">2021-10-17</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Science/" itemprop="url" rel="index"><span itemprop="name">Science</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>Summary of contextual subspace VQE, how it divide a Hamiltonian into classical and non-classical parts, how to evaluate the classical part, and how to reduce qubit requirements for the non-classical part. This note also contains some of my own thoughts on it.</p>
+<span id="more"></span>
+<h1 id="introduction">Introduction</h1>
+<p>This is a sequential work of William M. Kirby, Peter J. Love, et al. <a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.200501">[1]</a><a target="_blank" rel="noopener" href="https://arxiv.org/abs/2002.05693">[2]</a><a target="_blank" rel="noopener" href="https://quantum-journal.org/papers/q-2021-05-14-456/">[3]</a>.</p>
+<h1 id="merminperes-magic-square">Mermin–Peres magic square</h1>
+<p><span class="math display">\[
+\begin{bmatrix}
+IZ &amp; ZI &amp; ZZ\\
+XI &amp; IX &amp; XX\\
+-XZ &amp; -ZX &amp; YY
+\end{bmatrix}
+\]</span></p>
+<h1 id="measurement-contextuality">Measurement contextuality</h1>
+<p>This section is a summary of <a target="_blank" rel="noopener" href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.123.200501">[1]</a>.</p>
+<p><span class="math inline">\(\mathcal{S}\)</span>: set of observables (paulis)</p>
+<p><span class="math inline">\(\mathcal{Z}\)</span>: observables (in <span class="math inline">\(\mathcal{S}\)</span>) which commute universally in <span class="math inline">\(\mathcal{S}\)</span></p>
+<p><span class="math inline">\(\overline{\mathcal{S}}\)</span>: closure under inference</p>
+<p><strong>Theorem</strong>. <span class="math inline">\(\mathcal{S}\)</span> is <strong>noncontextual</strong> iff there is a <em>consistent</em> valuation, iff the <em>compability graph</em> of <span class="math inline">\(\mathcal{S} \backslash \mathcal{Z}\)</span> consists of disjoint cliques, i.e., <span class="math inline">\(\mathcal{S} =\mathcal{Z} \cup \mathcal{C}_{1} \cup \cdots \cup \mathcal{C}_{N}\)</span></p>
+<p>E.g., <span class="math inline">\(\mathcal{S} =\{IZ,ZI,IX,XZ\}\)</span>, compability graph:<img src="/attach/stjcc.png" alt="enter image description here" /></p>
+<h1 id="noncontextual-hamiltonian">Noncontextual Hamiltonian</h1>
+<p>This section is a summary of <a target="_blank" rel="noopener" href="https://arxiv.org/abs/2002.05693">[2]</a>.</p>
+<p><span class="math inline">\(\mathcal{S} =\mathcal{Z} \cup \mathcal{C}_{1} \cup \cdots \cup \mathcal{C}_{N}\)</span>.</p>
+<ul>
+<li>At least <em>one</em>, but not necessarily <em>all</em>, valuation is consistent.</li>
+</ul>
+<p>(E.g., <span class="math inline">\(\mathcal{S} =\{IX,XI,XX\}\)</span>)</p>
+<ul>
+<li>Claim: number of consistent valuations is a power of 2.</li>
+</ul>
+<p>(One minimum generator set: <span class="math inline">\(\mathcal{G} \cup \mathcal{A}\)</span>, where <span class="math inline">\(\mathcal{A}\)</span> consists of exactly one element <span class="math inline">\(A_{i}\)</span> from each <span class="math inline">\(\mathcal{C}_{i}\)</span>, and <span class="math inline">\(\mathcal{G}\)</span> is a minimum generator set of <span class="math inline">\(\mathcal{Z} \cup \{A_{i} C_{i} |1\leqslant i\leqslant N,C_{i} \in \mathcal{C}_{i}\}\)</span>)</p>
+<ul>
+<li><p><em>Ontos</em> vs <em>epistēmē</em>.</p></li>
+<li><p>Not necessarily all distribution of valuations (epistemic state) is possible (correponds to a valid ontic state).</p></li>
+</ul>
+<p>(E.g., <span class="math inline">\(\mathcal{S} =\{X,Z\}\)</span>)</p>
+<ul>
+<li>A valid set of epistemic states: <span class="math inline">\(E:=\left\{(\vec{q} ,\vec{r}) \in \{\pm 1\}^{|G|} \times \mathbb{R}^{N} ||\vec{r} |=1\right\}\)</span>, each <span class="math inline">\((\vec{q} ,\vec{r})\)</span> defines a joint distribution:</li>
+</ul>
+<p><span class="math display">\[P_{(\vec{q} ,\vec{r})}( g_{1} ,\cdots ,a_{1} ,\cdots ) =\prod \delta _{g_{i} ,q_{i}}\prod \frac{1}{2} |a_{i} +r_{i} |\]</span> (<span class="math inline">\(\langle G_{i} \rangle =q_{i} ,\langle A\rangle =+1\)</span>, where <span class="math inline">\(A( r) :=\sum r_{i} A_{i}\)</span>)</p>
+<ul>
+<li><span class="math inline">\(E\)</span> contains every eigenstate of the original <span class="math inline">\(H\)</span>.</li>
+</ul>
+<h1 id="contextual-subspace-vqe">Contextual subspace VQE</h1>
+<p>This section is a summary of <a target="_blank" rel="noopener" href="https://quantum-journal.org/papers/q-2021-05-14-456/">[3]</a>.</p>
+<p><span class="math inline">\(\mathcal{S} =\mathcal{S}_{nc} \cup \mathcal{S}_{c}\)</span>.</p>
+<ul>
+<li><p>Eigenstates of <span class="math inline">\(H\)</span> are not necessarily contained in <span class="math inline">\(E\)</span>.</p></li>
+<li><p>Howerver, by searching in ground epistemic state of <span class="math inline">\(\mathcal{S}_{nc}\)</span> (a subspace of the Hilbert space), one reduces qubits.</p></li>
+</ul>
+<p>(Rotate <span class="math inline">\(G_{i}\)</span>s into single qubit <span class="math inline">\(Z\)</span> gates and <span class="math inline">\(A\)</span> into a single qubit Pauli gate, thus fixing some qubits and restricting <span class="math inline">\(\mathcal{S}_{c}\)</span> to fewer qubits. Do VQE on restricted <span class="math inline">\(\mathcal{S}_{c}\)</span>, the approximation ground energy is <span class="math inline">\(E_{c} +E_{nc}\)</span>)</p>
+<ul>
+<li>Reduce <span class="math inline">\(\mathcal{S}_{nc}\)</span> to introduce more quantum correction (thus achieve higher accuracy), until a full VQE is recovered.</li>
+</ul>
+<figure>
+<img src="/attach/t1mp0.png" alt="enter image description here" /><figcaption>enter image description here</figcaption>
+</figure>
+<figure>
+<img src="/attach/3ign3.png" alt="enter image description here" /><figcaption>enter image description here</figcaption>
+</figure>
+<h1 id="how-contextual-can-a-hamiltonian-be">How contextual can a Hamiltonian be</h1>
+<p>A Hamiltonian can be arbitrarily contextual, i.e., the proportion of a non-contextual subset can be arbitrarily small.</p>
+<p><strong>Claim 1:</strong> Every graph can be the compatibility graph of a set of Pauli strings.</p>
+<p>Encode a graph into Pauli strings by induction. Initially set the encoding of every vertex to be an <span class="math inline">\(I\)</span>-string of length <span class="math inline">\(n\)</span> (number of vertices). Pick a vertex, set the first operator of its encoding to be <span class="math inline">\(X\)</span>. For every other vertex, set the first operator to be <span class="math inline">\(Z\)</span> iff there's no edge between them.</p>
+<p><strong>Claim 2:</strong> Disjoint-cliques subgraph (DCS) can be arbitrarily small, compared to the original graph.</p>
+<p>Construct an interval graph as follows. For fixed positive integer <span class="math inline">\(d\)</span>, <span class="math display">\[V=\bigcup _{k=0}^{d-1}\left\{\left(\frac{i}{2^{k}} ,\frac{i+1}{2^{k}}\right) |0\leqslant i&lt; 2^{k}\right\}\]</span> For example, <img src="/attach/qot79.png" alt="enter image description here" /> It can be shown that <span class="math inline">\(n=|V|=d2^{d-1}\)</span>, yet the maximum DCS has size <span class="math inline">\(2^{d} -1\)</span>.</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Quantum/" rel="tag"># Quantum</a>
+              <a href="/tags/Paper/" rel="tag"># Paper</a>
+              <a href="/tags/Note/" rel="tag"># Note</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/10/setup-site/" rel="prev" title="Setup a site from scratch">
+                  <i class="fa fa-chevron-left"></i> Setup a site from scratch
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/10/23/rayleigh-quotient/" rel="next" title="Generalized Rayleigh quotient">
+                  Generalized Rayleigh quotient <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mas</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

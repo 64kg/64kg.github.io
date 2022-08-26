@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="VQA may fail when cost function landscape is extremely flat, a phenomenon called Barren Plateaus. In this note, I list latest progress on this topic.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Barren Plateau (TBD)">
+<meta property="og:url" content="http://example.com/2022/03/26/barren-plateau/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="VQA may fail when cost function landscape is extremely flat, a phenomenon called Barren Plateaus. In this note, I list latest progress on this topic.">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-03-26T07:25:53.000Z">
+<meta property="article:modified_time" content="2022-03-26T07:25:53.000Z">
+<meta property="article:author" content="Mas">
+<meta property="article:tag" content="Quantum">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://example.com/2022/03/26/barren-plateau/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2022/03/26/barren-plateau/","path":"2022/03/26/barren-plateau/","title":"Barren Plateau (TBD)"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Barren Plateau (TBD) | Hexo</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#scaling-result"><span class="nav-number">2.</span> <span class="nav-text">Scaling result</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#mitigation-algorithms"><span class="nav-number">3.</span> <span class="nav-text">Mitigation algorithms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#appendix-i-integration-on-the-unitary-group"><span class="nav-number">4.</span> <span class="nav-text">Appendix I: Integration on the unitary group</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#monomial-integration-formula"><span class="nav-number">4.1.</span> <span class="nav-text">Monomial integration formula</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#useful-identities"><span class="nav-number">4.2.</span> <span class="nav-text">Useful identities</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#appendix-ii-quantum-desgin"><span class="nav-number">5.</span> <span class="nav-text">Appendix II: Quantum desgin</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#definition"><span class="nav-number">5.1.</span> <span class="nav-text">Definition</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mas</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2022/03/26/barren-plateau/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mas">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Barren Plateau (TBD) | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Barren Plateau (TBD)
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2022-03-26 15:25:53" itemprop="dateCreated datePublished" datetime="2022-03-26T15:25:53+08:00">2022-03-26</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Science/" itemprop="url" rel="index"><span itemprop="name">Science</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>VQA may fail when cost function landscape is extremely flat, a phenomenon called Barren Plateaus. In this note, I list latest progress on this topic.</p>
+<span id="more"></span>
+<h1 id="introduction">Introduction</h1>
+<p>Variational quantum algorithms (VQA) utilize an ansatz (or parameterized quantum circuits, PQC) <span class="math inline">\(U( \theta )\)</span> to optimize a cost function <span class="math inline">\(C( \theta )\)</span>. The optimization iteration is performed by classical optimizors such as GD, BFGS, ADAM, etc. Gradient based optimizors have to query gradients at each iteration, which is done by measuring ansatz. One possible reason this algorithm fail is cost function landscape being extremely flat. By Chernov bound it implies unacceptable number of measurements for evaluating a single gradients. To make it precise, we say the cost function exhibits barren plateau (BP) for a parameter if variance of respective partial derivative is exponentially small.</p>
+<p>A cost function <span class="math inline">\(C( \theta )\)</span> of a <span class="math inline">\(n\)</span>-qudit ansatz <span class="math inline">\(U( \theta )\)</span> is said to have a barren plateau when training <span class="math inline">\(\theta _{i} \in \theta\)</span>, if <span class="math display">\[\underset{\theta }{\operatorname{Var}}[ \partial _{\theta _{i}} C( \theta )] =\frac{1}{\exp( \Omega ( n))}\]</span></p>
+<p>We make a few remarks here:</p>
+<ol type="1">
+<li><p>In some text, BP is more strictly defined with respect to <span class="math inline">\(\| \nabla C\|\)</span>.</p></li>
+<li><p>By Chebyshev inequality, the probability of finding a point outside of the BP area is exponentially small, which means random parameter initialization is basically inapplicable.</p></li>
+</ol>
+<p>We now make some conventions and give some simple insights. We may assume ansatz to consists of parameterized gates and unparameterized gates, and each parameterized gate takes the form  <span class="math inline">\(\exp( -i\theta A)\)</span>, where <span class="math inline">\(A\)</span> is a Hermitian. Parameterized gates are assumed to be periodical and smooth, with period <span class="math inline">\(2\pi\)</span>. Unless specially specified, cost function takes the form <span class="math inline">\(\operatorname{Tr}\left( OU\rho U^{\dagger }\right)\)</span>, and <span class="math inline">\(\mathbb{E}_{\theta }[ C] =0\)</span>.</p>
+<p><strong>Lemma 1</strong> For each <span class="math inline">\(\theta _{i} \in \theta\)</span>, <span class="math display">\[\underset{\theta }{\mathbb{E}}[ \partial _{\theta _{i}} C] =0\]</span></p>
+<p><em>proof</em>. We decompose periodical real-valued function <span class="math inline">\(C\)</span> as Fourier series <span class="math inline">\(\sum _{\mathbf{n}} c_{\mathbf{n}}\exp( i\theta \cdotp \mathbf{n})\)</span>. As a consequence,</p>
+<p><span class="math display">\[\underset{\theta }{\mathbb{E}}[ \partial _{\theta _{i}} C] =\sum _{\mathbf{n}} c_{\mathbf{n}}\underset{\theta }{\mathbb{E}}\left[ e^{i\theta \cdotp \mathbf{n}}\right]( in_{i}) =0
+\tag*{$\square$}\]</span></p>
+<h1 id="scaling-result">Scaling result</h1>
+<h1 id="mitigation-algorithms">Mitigation algorithms</h1>
+<h1 id="appendix-i-integration-on-the-unitary-group">Appendix I: Integration on the unitary group</h1>
+<h2 id="monomial-integration-formula">Monomial integration formula</h2>
+<p>A general formula<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> of integral of a <span class="math inline">\(( t,t)\)</span>-order monomial over the unitary group <span class="math inline">\(U( d)\)</span> of dimension <span class="math inline">\(d\)</span> can be represented by Weingarten function <span class="math inline">\(\operatorname{Wg}\)</span>:</p>
+<p><span class="math display">\[
+\int _{U( d)} U_{i_{1} j_{1}} \cdots U_{i_{t} j_{t}} U_{i&#39;_{1} j&#39;_{1}}^{*} \cdots U_{i&#39;_{t} j&#39;_{t}}^{*} dU=\sum _{\sigma ,\tau \in S( t)} \delta _{i_{1} i&#39;_{\sigma ( 1)}} \cdots \delta _{i_{t} i&#39;_{\sigma ( t)}} \delta _{j_{1} j&#39;_{\tau ( 1)}} \cdots \delta _{j_{t} j&#39;_{\tau ( t)}}\operatorname{Wg}_{d}^{t}\left( \sigma \tau ^{-1}\right)
+\]</span></p>
+<p>The exact form of Weingarten function is <span class="math display">\[\operatorname{Wg}_{d}^{t}( \pi ) =\frac{1}{t!^{2}}\sum _{\lambda \vdash t}\frac{\chi ^{\lambda }( 1)^{2} \chi ^{\lambda }( \pi )}{s_{\lambda ,d}( 1)}\]</span> where the sum is over all integer partition <span class="math inline">\(\lambda\)</span> of <span class="math inline">\(q\)</span>, <span class="math inline">\(\chi ^{\lambda }\)</span> is the character of <span class="math inline">\(S( t)\)</span> indexed by <span class="math inline">\(\lambda\)</span>, and <span class="math inline">\(s_{\lambda ,d}\)</span> is the Schur function.</p>
+<p>There are a few remarks on this formula:</p>
+<ol type="1">
+<li><p>Here we follow convention in the quantum mechanics and <span class="math inline">\(U^{*}\)</span> represents conjugate of <span class="math inline">\(U\)</span>, not conjugate transpose. The latter is written as <span class="math inline">\(U^{\dagger }\)</span>.</p></li>
+<li><p>The value of Weingarten function only depends on the conjugacy class of a permutation, thus the term <span class="math inline">\(\operatorname{Wg}_{d}^{t}\left( \sigma \tau ^{-1}\right)\)</span> in (1) can be replaced with <span class="math inline">\(\operatorname{Wg}_{d}^{t}\left( \sigma ^{-1} \tau \right) =\operatorname{Wg}_{d}^{t}\left( \tau \sigma ^{-1}\right) =\operatorname{Wg}_{d}^{t}\left( \tau ^{-1} \sigma \right)\)</span>.</p></li>
+<li><p>The measure of <span class="math inline">\(U( d)\)</span> is the unique normalized Haar measure. In this sense, such integrals can be identified as expectation: <span class="math inline">\(\int _{U( d)} f( U) dU=\mathbb{E}_{U}[ f( U)]\)</span>. It also implies that (1) is in fact a <span class="math inline">\(( t,t)\)</span>th (or simply <span class="math inline">\(t\)</span>th) moment.</p></li>
+<li><p>The integral vanishes if the order <span class="math inline">\(( t,t&#39;)\)</span> is not balanced.</p></li>
+<li><p>The integral vanishes if row (column) indices and conjugate row (column) indices do not pair up.</p></li>
+</ol>
+<p>Packages and softwares:</p>
+<ol type="1">
+<li>IntU<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>: symbolic inegration, on Mathematica.</li>
+</ol>
+<h2 id="useful-identities">Useful identities</h2>
+<p><strong>First moment</strong> <span class="math display">\[\int _{U( d)} U_{i_{1} j_{1}} U_{i&#39;_{1} j&#39;_{1}}^{*} dU=\frac{\delta _{i_{1} i&#39;_{1}} \delta _{j_{1} j&#39;_{1}}}{d}\]</span></p>
+<p><strong>Second moment</strong> <span class="math display">\[\begin{gathered}
+\int _{U( d)} U_{i_{1} j_{1}} U_{i_{2} j_{2}} U_{i&#39;_{1} j&#39;_{1}}^{*} U_{i&#39;_{2} j&#39;_{2}}^{*} dU\\
+=\frac{\delta _{i_{1} i&#39;_{1}} \delta _{i_{2} i&#39;_{2}} \delta _{j_{1} j&#39;_{1}} \delta _{j_{2} j&#39;_{2}} +\delta _{i_{1} i&#39;_{2}} \delta _{i_{2} i&#39;_{1}} \delta _{j_{1} j&#39;_{2}} \delta _{j_{2} j&#39;_{1}}}{d^{2} -1} -\frac{\delta _{i_{1} i&#39;_{1}} \delta _{i_{2} i&#39;_{2}} \delta _{j_{1} j&#39;_{2}} \delta _{j_{2} j&#39;_{1}} +\delta _{i_{1} i&#39;_{2}} \delta _{i_{2} i&#39;_{1}} \delta _{j_{1} j&#39;_{1}} \delta _{j_{2} j&#39;_{2}}}{d\left( d^{2} -1\right)}\end{gathered}\]</span></p>
+<p><strong>Equivalent form of</strong> (1) <span class="math display">\[\int _{U( d)} U^{\otimes t} \otimes \left( U^{*}\right)^{\otimes t} dU=\sum _{\sigma ,\tau \in S( t)}\operatorname{Wg}_{d}^{t}\left( \sigma \tau ^{-1}\right) |\sigma _{d}^{t} \rangle \langle \tau _{d}^{t} |\]</span> where <span class="math inline">\(|\pi _{d}^{t} \rangle\)</span> is the non-normalized <em>permutation state</em> <span class="math display">\[|\pi _{d}^{t} \rangle =\sum _{i_{1} ,\dotsc ,i_{t} \in [ d]} |i_{\pi ( 1)} ,\dotsc ,i_{\pi ( t)} \rangle |i_{1} ,\dotsc ,i_{t} \rangle\]</span></p>
+<h1 id="appendix-ii-quantum-desgin">Appendix II: Quantum desgin</h1>
+<h2 id="definition">Definition</h2>
+<p><strong>Definition 2</strong> A <strong>unitary t-design</strong> is an ensamble of unitaries <span class="math inline">\(\{V_{i} ,p_{i}\}\)</span> which is indistinguishable from Haar measure, by observing up to <span class="math inline">\(t\)</span>th moment. Precisely, for any <span class="math inline">\(( t,t)\)</span>-polynomial <span class="math inline">\(P\)</span>, <span class="math display">\[\sum _{i} p_{i} P( V_{i}) =\int _{U( d)} P( U) dU\]</span> or equivalently <span class="math display">\[\sum _{i} p_{i} V_{i}^{\otimes t} \otimes \left( V_{i}^{*}\right)^{\otimes t} =\int _{U( d)} U^{\otimes t} \otimes \left( U^{*}\right)^{\otimes t} dU\]</span></p>
+<p>We remark that <span class="math inline">\(M^{\otimes t} \otimes \left( M^{*}\right)^{\otimes t}\)</span> is refered to as <span class="math inline">\(t\)</span><strong>th moment superoperator</strong>, sending <span class="math inline">\(\rho ^{\otimes t}\)</span> to <span class="math inline">\(\left( M\rho M^{\dagger }\right)^{\otimes t}\)</span>.</p>
+<p>Quantum design share the same name with block design. In fact, they are similar in the sense of randomness. A <strong>block t-design</strong> is an assignment of blocks (<span class="math inline">\(k\)</span>-subsets) in <span class="math inline">\([ N]\)</span>, such that for all <span class="math inline">\(i=1,2,\dotsc ,t\)</span>, every two <span class="math inline">\(i\)</span>-tuples lie in the same number of blocks. It turn out that, if machine A randomly output <span class="math inline">\(k\)</span> different numbers from <span class="math inline">\([ N]\)</span> while machine B randomly output a block from a block t-design, these two machine is indistinguishable if observer is only allowed to read <span class="math inline">\(t\)</span> elements from outputs.</p>
+<section class="footnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Collins, B. (2002). Moments and Cumulants of Polynomial random variables on unitary groups, the Itzykson-Zuber integral and free probability. ArXiv. https://doi.org/10.48550/ARXIV.MATH-PH/0205010<a href="#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p>Puchała, Z., &amp; Miszczak, J. A. (2017). Symbolic integration with respect to the Haar measure on the unitary groups. Bulletin of the Polish Academy of Sciences Technical Sciences, 65(1), 21–27. https://doi.org/10.1515/bpasts-2017-0003<a href="#fnref2" class="footnote-back">↩</a></p></li>
+</ol>
+</section>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Quantum/" rel="tag"># Quantum</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2022/03/25/intrv-algebra/" rel="prev" title="The Algebra of Independent Nonnegative Integer Random Variables (IntRV)">
+                  <i class="fa fa-chevron-left"></i> The Algebra of Independent Nonnegative Integer Random Variables (IntRV)
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2022/05/04/ubuntu-log-md/" rel="next" title="Documenting my experience with Ubuntu">
+                  Documenting my experience with Ubuntu <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mas</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>

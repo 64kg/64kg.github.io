@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 6.1.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css" integrity="sha256-jTIdiMuX/e3DGJUGwl3pKSxuc6YOuqtJYkM0bGQESA4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"example.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.10.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"Searching...","empty":"We didn't find any results for the search: ${query}","hits_time":"${hits} results found in ${time} ms","hits":"${hits} results found"}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="A record of mine setup of web hosting, domain etc.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Setup a site from scratch">
+<meta property="og:url" content="http://example.com/2021/09/10/setup-site/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="A record of mine setup of web hosting, domain etc.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://example.com/attach/bcq26.png">
+<meta property="article:published_time" content="2021-09-10T15:05:00.000Z">
+<meta property="article:modified_time" content="2021-12-27T07:22:00.000Z">
+<meta property="article:author" content="Mas">
+<meta property="article:tag" content="Web">
+<meta property="article:tag" content="Server">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/attach/bcq26.png">
+
+
+<link rel="canonical" href="http://example.com/2021/09/10/setup-site/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"en","comments":true,"permalink":"http://example.com/2021/09/10/setup-site/","path":"2021/09/10/setup-site/","title":"Setup a site from scratch"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Setup a site from scratch | Hexo</title>
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">Hexo</p>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>About</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags</a></li>
+        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a></li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#domain"><span class="nav-number">1.</span> <span class="nav-text">Domain</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#purchase"><span class="nav-number">1.1.</span> <span class="nav-text">Purchase</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#dns"><span class="nav-number">1.2.</span> <span class="nav-text">DNS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ssl"><span class="nav-number">1.3.</span> <span class="nav-text">SSL</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#fire-wall"><span class="nav-number">2.</span> <span class="nav-text">Fire wall</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#apache2"><span class="nav-number">3.</span> <span class="nav-text">Apache2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#installation"><span class="nav-number">3.1.</span> <span class="nav-text">Installation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#enable-ssl"><span class="nav-number">3.2.</span> <span class="nav-text">Enable SSL</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#disable-directory-listing"><span class="nav-number">3.3.</span> <span class="nav-text">Disable directory listing</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#http-to-https"><span class="nav-number">3.4.</span> <span class="nav-text">HTTP to HTTPS</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cdn-configure"><span class="nav-number">3.5.</span> <span class="nav-text">CDN configure</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#proxy"><span class="nav-number">3.6.</span> <span class="nav-text">Proxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#code-server"><span class="nav-number">3.7.</span> <span class="nav-text">Code server</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#jupyter-notebook"><span class="nav-number">3.8.</span> <span class="nav-text">Jupyter notebook</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#nginx"><span class="nav-number">4.</span> <span class="nav-text">Nginx</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#install"><span class="nav-number">4.1.</span> <span class="nav-text">Install</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#config-ssl-and-httphttps"><span class="nav-number">4.2.</span> <span class="nav-text">Config ssl and http&#x2F;https</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#the-defaultfallback-site"><span class="nav-number">4.3.</span> <span class="nav-text">The default&#x2F;fallback site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#a-static-site"><span class="nav-number">4.4.</span> <span class="nav-text">A static site</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#reverse-proxy"><span class="nav-number">4.5.</span> <span class="nav-text">Reverse proxy</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#cdn"><span class="nav-number">4.6.</span> <span class="nav-text">CDN</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Mas</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">15</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+          <a href="/categories/">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">16</span>
+        <span class="site-state-item-name">tags</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="Back to top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="en">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/09/10/setup-site/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Mas">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+      <meta itemprop="description" content="">
+    </span>
+    
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Setup a site from scratch | Hexo">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Setup a site from scratch
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">Posted on</span>
+
+      <time title="Created: 2021-09-10 23:05:00" itemprop="dateCreated datePublished" datetime="2021-09-10T23:05:00+08:00">2021-09-10</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">Edited on</span>
+      <time title="Modified: 2021-12-27 15:22:00" itemprop="dateModified" datetime="2021-12-27T15:22:00+08:00">2021-12-27</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">In</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/Tech/" itemprop="url" rel="index"><span itemprop="name">Tech</span></a>
+        </span>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p>A record of mine setup of web hosting, domain etc.</p>
+<span id="more"></span>
+<h1 id="domain">Domain</h1>
+<h2 id="purchase">Purchase</h2>
+<p><a target="_blank" rel="noopener" href="https://hk.godaddy.com/">GoDaddy</a> supports Alipay.</p>
+<h2 id="dns">DNS</h2>
+<p>Modify the <code>A</code> record: - name: <code>*</code> - value: <code>[IP ADDRESS]</code></p>
+<h2 id="ssl">SSL</h2>
+<p>I've followed this <a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04">tutorial</a> to install Let's Encrypt certificate but it didn't turn out well. It seems that install wildcard certificate using "certbot" requires some cumbersome steps. Nevertheless, this tutorial offers great instruction on how to configure your Ubuntu vps properly after deployment.</p>
+<p><a target="_blank" rel="noopener" href="https://www.digitalocean.com/community/tutorials/how-to-secure-apache-with-let-s-encrypt-on-ubuntu-20-04">FreeSSL.cn</a> is somewhat straightforward to use. The drawback is that you have to renew your Let's Encrypt certificate every 3 months. <img src="/attach/bcq26.png" alt="enter image description here" /></p>
+<h1 id="fire-wall">Fire wall</h1>
+<p>For Ubuntu 20.04 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ufw allow ssh</span><br><span class="line">ufw allow http</span><br><span class="line">ufw allow https</span><br><span class="line">ufw <span class="built_in">enable</span></span><br></pre></td></tr></table></figure></p>
+<h1 id="apache2">Apache2</h1>
+<h2 id="installation">Installation</h2>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Debian</span></span><br><span class="line">sudo apt install apache2</span><br><span class="line"><span class="comment"># CentOS</span></span><br><span class="line">sudo yum install httpd</span><br></pre></td></tr></table></figure>
+<h2 id="enable-ssl">Enable SSL</h2>
+<p>For Ubuntu: <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">a2enmod ssl</span><br></pre></td></tr></table></figure></p>
+<h2 id="disable-directory-listing">Disable directory listing</h2>
+<p>On Ubuntu, edit /etc/apache2/apache2.conf. In <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Directory /var/www/&gt;</span><br><span class="line">        Options Indexes FollowSymLinks</span><br><span class="line">        AllowOverride None</span><br><span class="line">        Require all granted</span><br><span class="line">&lt;/Directory&gt;</span><br></pre></td></tr></table></figure> remove <code>Indexes</code>.</p>
+<h2 id="http-to-https">HTTP to HTTPS</h2>
+<p>Enable module rewrite on Ubuntu: <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">a2enmod rewrite</span><br></pre></td></tr></table></figure> conf file <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;VirtualHost *:80&gt;</span><br><span class="line">	RewriteEngine On</span><br><span class="line">	RewriteCond %&#123;HTTPS&#125; off</span><br><span class="line">	RewriteRule ^ https://%&#123;HTTP_HOST&#125;%&#123;REQUEST_URI&#125;</span><br><span class="line">&lt;/VirtualHost&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="cdn-configure">CDN configure</h2>
+<p>Enable module headers, rewrite on Ubuntu <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a2enmod headers rewrite</span><br></pre></td></tr></table></figure> conf file <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;QUERY_STRING&#125; (^|&amp;)name=(.*?)(&amp;|$)</span><br><span class="line">RewriteRule ^(.*)$ $1 [E=NAME:%2]</span><br><span class="line"></span><br><span class="line">Header set Content-Disposition &quot;attachment&quot;</span><br><span class="line">Header set Content-Disposition &quot;attachment; filename=\&quot;%&#123;NAME&#125;e\&quot;&quot; env=NAME</span><br><span class="line">Header set Access-Control-Allow-Origin &quot;*&quot;</span><br></pre></td></tr></table></figure> In your html file, a download link should be <figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://cdn.example.com/fileid?name=info.txt&quot;</span>&gt;</span>click<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h2 id="proxy">Proxy</h2>
+<p>Enable module proxy-http on Ubuntu: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a2enmod proxy-http</span><br></pre></td></tr></table></figure> conf file: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;Location /&gt;</span><br><span class="line">	ProxyPass http://127.0.0.1:8000/</span><br><span class="line">	ProxyPassReverse http://127.0.0.1:8000/</span><br><span class="line">&lt;/Location&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="code-server"><a target="_blank" rel="noopener" href="https://github.com/cdr/code-server">Code server</a></h2>
+<p>Enable module proxy-http, proxy-wstunnel, rewrite on Ubuntu: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a2enmod proxy-http proxy-wstunnel rewrite</span><br></pre></td></tr></table></figure> conf file: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RewriteEngine On</span><br><span class="line">RewriteCond %&#123;HTTP:Upgrade&#125; =websocket [NC]</span><br><span class="line">RewriteRule /(.*) ws://0.0.0.0:8080/$1 [P,L]</span><br><span class="line">RewriteCond %&#123;HTTP:Upgrade&#125; !=websocket [NC]</span><br><span class="line">RewriteRule /(.*) http://0.0.0.0:8080/$1 [P,L]</span><br><span class="line"></span><br><span class="line">&lt;Location /&gt;</span><br><span class="line">	ProxyPass http://0.0.0.0:8080</span><br><span class="line">	ProxyPassReverse http://0.0.0.0:8080</span><br><span class="line">&lt;/Location&gt;</span><br></pre></td></tr></table></figure></p>
+<h2 id="jupyter-notebook">Jupyter notebook</h2>
+<p>Enable module proxy-http, proxy-wstunnel, headers on Ubuntu: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">a2enmod proxy-http proxy-wstunnel headers</span><br></pre></td></tr></table></figure> conf file: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">RequestHeader set Origin &quot;http://127.0.0.1:8888&quot;</span><br><span class="line"></span><br><span class="line">&lt;Location /&gt;</span><br><span class="line">	ProxyPass http://127.0.0.1:8888/</span><br><span class="line">	ProxyPassReverse http://127.0.0.1:8888/</span><br><span class="line">&lt;/Location&gt;</span><br><span class="line"></span><br><span class="line">&lt;Location /api/kernels&gt;</span><br><span class="line">	ProxyPass ws://127.0.0.1:8888/api/kernels</span><br><span class="line">	ProxyPassReverse ws://127.0.0.1:8888/api/kernels</span><br><span class="line">&lt;/Location&gt;</span><br></pre></td></tr></table></figure></p>
+<h1 id="nginx">Nginx</h1>
+<p>Nginx is faster and easier to config, compared to Apache.</p>
+<h2 id="install">Install</h2>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">sudo apt install nginx</span><br></pre></td></tr></table></figure>
+<p>The configuration folder: <code>/etc/nginx/</code></p>
+<h2 id="config-ssl-and-httphttps">Config ssl and http/https</h2>
+<p>Create <code>ssl.conf</code> and <code>https.conf</code> in <code>/etc/nginx/snippets</code></p>
+<p>In <code>ssl.conf</code>: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ssl_session_timeout 1d;</span><br><span class="line">ssl_session_cache shared:SSL:50m;</span><br><span class="line">ssl_session_tickets off;</span><br><span class="line"></span><br><span class="line">ssl_protocols TLSv1.2;</span><br><span class="line">ssl_ciphers ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-RSA-AES256-SHA384;</span><br><span class="line">ssl_ecdh_curve secp384r1;</span><br><span class="line">ssl_prefer_server_ciphers on;</span><br><span class="line"></span><br><span class="line">ssl_stapling on;</span><br><span class="line">ssl_stapling_verify on;</span><br><span class="line"></span><br><span class="line">add_header Strict-Transport-Security &quot;max-age=15768000; includeSubdomains; preload&quot;;</span><br><span class="line">add_header X-Frame-Options DENY;</span><br><span class="line">add_header X-Content-Type-Options nosniff;</span><br><span class="line"></span><br><span class="line">ssl_certificate /path/to/fullchain.pem;</span><br><span class="line">ssl_certificate_key /path/to/privkey.pem;</span><br><span class="line">ssl_trusted_certificate /path/to/fullchain.pem;</span><br></pre></td></tr></table></figure></p>
+<p>In <code>https.conf</code>: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">listen 80;</span><br><span class="line">listen 443 ssl;</span><br><span class="line"></span><br><span class="line">if ($scheme != &quot;https&quot;) &#123;</span><br><span class="line">    return 301 https://$server_name$request_uri;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h2 id="the-defaultfallback-site">The default/fallback site</h2>
+<p>Modify <code>/etc/nginx/sites-available/default</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    include snippets/ssl.conf;   </span><br><span class="line"></span><br><span class="line">    listen 80 default_server;</span><br><span class="line">    listen 443 ssl default_server;</span><br><span class="line"></span><br><span class="line">    server_name _;</span><br><span class="line"></span><br><span class="line">    return 404;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">server &#123;</span><br><span class="line">    include snippets/ssl.conf;   </span><br><span class="line">    include snippets/https.conf;   </span><br><span class="line"></span><br><span class="line">    server_name example.com www.example.com;</span><br><span class="line"></span><br><span class="line">    add_header Content-Type &quot;text/plain; charset=utf-8&quot;;</span><br><span class="line">    return 200 &quot;Hi there&quot;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="a-static-site">A static site</h2>
+<p>Create <code>/etc/nginx/sites-available/test</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    include snippets/ssl.conf;</span><br><span class="line">    include snippets/https.conf;</span><br><span class="line"></span><br><span class="line">    server_name test.example.com;</span><br><span class="line">    root /var/www/test;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>Enable it: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">ln -s /etc/nginx/sites-available/test /etc/nginx/sites-enabled</span><br></pre></td></tr></table></figure></p>
+<p>Refresh Nginx: <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo service nginx reload</span><br></pre></td></tr></table></figure></p>
+<h2 id="reverse-proxy">Reverse proxy</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    include snippets/ssl.conf;</span><br><span class="line">    include snippets/https.conf;</span><br><span class="line"></span><br><span class="line">    server_name test.example.com;</span><br><span class="line">    root /var/www/test;</span><br><span class="line"></span><br><span class="line">    location /api/ &#123;</span><br><span class="line">        proxy_pass http://127.0.0.1:8000/test/;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="cdn">CDN</h2>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">server &#123;</span><br><span class="line">    include snippets/ssl.conf;</span><br><span class="line">    include snippets/https.conf;</span><br><span class="line"></span><br><span class="line">    server_name cdn.example.com;</span><br><span class="line">    root /var/www/cdn;</span><br><span class="line"></span><br><span class="line">    location / &#123;</span><br><span class="line">        add_header Access-Control-Allow-Origin *;</span><br><span class="line">        add_header Content-Disposition attachment;</span><br><span class="line">        if ($arg_name) &#123;</span><br><span class="line">            add_header Content-Disposition &quot;attachment; filename=$arg_name&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Web/" rel="tag"># Web</a>
+              <a href="/tags/Server/" rel="tag"># Server</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/01/quant-paper-collection/" rel="prev" title="Collection of quantum papers">
+                  <i class="fa fa-chevron-left"></i> Collection of quantum papers
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/10/16/contextual-vqe/" rel="next" title="Contextual subspace VQE">
+                  Contextual subspace VQE <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2022</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Mas</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/schemes/muse.js"></script><script src="/js/next-boot.js"></script>
+
+  
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><script class="next-config" data-name="mathjax" type="application/json">{"enable":true,"tags":"ams","js":{"url":"//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"}}</script>
+<script src="/js/third-party/math/mathjax.js"></script>
+
+
+
+</body>
+</html>
