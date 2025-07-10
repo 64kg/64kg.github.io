@@ -1,0 +1,2537 @@
+[
+  {
+    "name": "Theoretical Computer Science",
+    "abbr": "THEOR COMPUT SCI",
+    "if": "1",
+    "if_5y": "1",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "96/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PHYSICA A-STATISTICAL MECHANICS AND ITS APPLICATIONS",
+    "abbr": "PHYSICA A",
+    "if": "3.1",
+    "if_5y": "2.8",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "32/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "IEEE TRANSACTIONS ON COMPUTER-AIDED DESIGN OF INTEGRATED CIRCUITS AND SYSTEMS",
+    "abbr": "IEEE T COMPUT AID D",
+    "if": "2.9",
+    "if_5y": "2.9",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "23/60"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "90/175"
+      },
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "161/366"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：硬件",
+          "name_en": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+          "sec": "3区"
+        },
+        {
+          "name": "计算机：跨学科应用",
+          "name_en": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+          "sec": "3区"
+        },
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PHYSICAL REVIEW A",
+    "abbr": "PHYS REV A",
+    "if": "2.9",
+    "if_5y": "3",
+    "jcr": [
+      {
+        "cat": "OPTICS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "53/125"
+      },
+      {
+        "cat": "PHYSICS, ATOMIC, MOLECULAR & CHEMICAL",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "13/39"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：原子、分子和化学物理",
+          "name_en": "PHYSICS, ATOMIC, MOLECULAR & CHEMICAL",
+          "sec": "2区"
+        },
+        {
+          "name": "光学",
+          "name_en": "OPTICS",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Quantum Science and Technology",
+    "abbr": "QUANTUM SCI TECHNOL",
+    "if": "5",
+    "if_5y": "6.8",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "21/114"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "9/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "2区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Journal of Physics A-Mathematical and Theoretical",
+    "abbr": "J PHYS A-MATH THEOR",
+    "if": "2.1",
+    "if_5y": "2.1",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MATHEMATICAL",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "17/61"
+      },
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "49/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：数学物理",
+          "name_en": "PHYSICS, MATHEMATICAL",
+          "sec": "3区"
+        },
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Advanced Quantum Technologies",
+    "abbr": "ADV QUANTUM TECHNOL",
+    "if": "4.3",
+    "if_5y": "5.4",
+    "jcr": [
+      {
+        "cat": "OPTICS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "27/125"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "12/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "光学",
+          "name_en": "OPTICS",
+          "sec": "3区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PHYSICA SCRIPTA",
+    "abbr": "PHYS SCRIPTA",
+    "if": "2.6",
+    "if_5y": "2.4",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "41/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Physical Review Research",
+    "abbr": "PHYS REV RES",
+    "if": "4.2",
+    "if_5y": "4.4",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "ESCI",
+        "quartile": "Q1",
+        "rank": "25/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Communications Physics",
+    "abbr": "COMMUN PHYS-UK",
+    "if": "5.8",
+    "if_5y": "6.1",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "16/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Theory of Computing",
+    "abbr": "THEOR COMPUT",
+    "if": "0.7",
+    "if_5y": "1.4",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "123/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "JOURNAL OF COMBINATORIAL OPTIMIZATION",
+    "abbr": "J COMB OPTIM",
+    "if": "1.1",
+    "if_5y": "1.1",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "147/175"
+      },
+      {
+        "cat": "MATHEMATICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "162/343"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "数学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：跨学科应用",
+          "name_en": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+          "sec": "4区"
+        },
+        {
+          "name": "应用数学",
+          "name_en": "MATHEMATICS, APPLIED",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Frontiers of Computer Science",
+    "abbr": "FRONT COMPUT SCI-CHI",
+    "if": "4.6",
+    "if_5y": "3.9",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "58/258"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "17/128"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "21/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：信息系统",
+          "name_en": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+          "sec": "2区"
+        },
+        {
+          "name": "计算机：软件工程",
+          "name_en": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
+          "sec": "2区"
+        },
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Nature Physics",
+    "abbr": "NAT PHYS",
+    "if": "18.4",
+    "if_5y": "21.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "5/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Science China-Physics Mechanics & Astronomy",
+    "abbr": "SCI CHINA PHYS MECH",
+    "if": "7.5",
+    "if_5y": "6",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "12/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Results in Physics",
+    "abbr": "RESULTS PHYS",
+    "if": "4.6",
+    "if_5y": "4.3",
+    "jcr": [
+      {
+        "cat": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "159/460"
+      },
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "23/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        },
+        {
+          "name": "材料科学：综合",
+          "name_en": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "EXPERT SYSTEMS WITH APPLICATIONS",
+    "abbr": "EXPERT SYST APPL",
+    "if": "7.5",
+    "if_5y": "7.8",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "28/204"
+      },
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "36/366"
+      },
+      {
+        "cat": "OPERATIONS RESEARCH & MANAGEMENT SCIENCE",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "7/106"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：人工智能",
+          "name_en": "COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE",
+          "sec": "2区"
+        },
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "2区"
+        },
+        {
+          "name": "运筹学与管理科学",
+          "name_en": "OPERATIONS RESEARCH & MANAGEMENT SCIENCE",
+          "sec": "2区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "IEEE-ACM TRANSACTIONS ON NETWORKING",
+    "abbr": "IEEE ACM T NETWORK",
+    "if": "3.6",
+    "if_5y": "4.2",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "18/60"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "36/147"
+      },
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "128/366"
+      },
+      {
+        "cat": "TELECOMMUNICATIONS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "50/120"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：硬件",
+          "name_en": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+          "sec": "3区"
+        },
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "3区"
+        },
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "3区"
+        },
+        {
+          "name": "电信学",
+          "name_en": "TELECOMMUNICATIONS",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Nature Communications",
+    "abbr": "NAT COMMUN",
+    "if": "15.7",
+    "if_5y": "17.2",
+    "jcr": [
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "10/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "综合性期刊",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Acta Mathematicae Applicatae Sinica-English Series",
+    "abbr": "ACTA MATH APPL SIN-E",
+    "if": "0.9",
+    "if_5y": "0.8",
+    "jcr": [
+      {
+        "cat": "MATHEMATICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "216/343"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "数学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "应用数学",
+          "name_en": "MATHEMATICS, APPLIED",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "INFORMATION AND COMPUTATION",
+    "abbr": "INFORM COMPUT",
+    "if": "1",
+    "if_5y": "1.1",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "96/147"
+      },
+      {
+        "cat": "MATHEMATICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "192/343"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        },
+        {
+          "name": "应用数学",
+          "name_en": "MATHEMATICS, APPLIED",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "IEEE TRANSACTIONS ON INFORMATION THEORY",
+    "abbr": "IEEE T INFORM THEORY",
+    "if": "2.9",
+    "if_5y": "2.8",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "121/258"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "44/147"
+      },
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "161/366"
+      },
+      {
+        "cat": "MATHEMATICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "22/343"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：信息系统",
+          "name_en": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+          "sec": "3区"
+        },
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "IEEE Transactions on Quantum Engineering",
+    "abbr": null,
+    "if": "4.6",
+    "if_5y": "6.1",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "ESCI",
+        "quartile": "Q1",
+        "rank": "21/147"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "ESCI",
+        "quartile": "Q2",
+        "rank": "10/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": null,
+        "sec": null
+      },
+      "sub_cat": [],
+      "top": null,
+      "review": null
+    }
+  },
+  {
+    "name": "JOURNAL OF MACHINE LEARNING RESEARCH",
+    "abbr": "J MACH LEARN RES",
+    "if": "5.2",
+    "if_5y": "8.8",
+    "jcr": [
+      {
+        "cat": "AUTOMATION & CONTROL SYSTEMS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "18/89"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "51/204"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "自动化与控制系统",
+          "name_en": "AUTOMATION & CONTROL SYSTEMS",
+          "sec": "4区"
+        },
+        {
+          "name": "计算机：人工智能",
+          "name_en": "COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Quantum",
+    "abbr": "QUANTUM-AUSTRIA",
+    "if": "5.4",
+    "if_5y": "7.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "18/114"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "7/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PRX Quantum",
+    "abbr": "PRX QUANTUM",
+    "if": "11",
+    "if_5y": "12.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "17/187"
+      },
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "7/114"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "2/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "1区"
+        },
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Science China-Information Sciences",
+    "abbr": "SCI CHINA INFORM SCI",
+    "if": "7.6",
+    "if_5y": "6.8",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "16/258"
+      },
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "33/366"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：信息系统",
+          "name_en": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+          "sec": "1区"
+        },
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "NATURE",
+    "abbr": "NATURE",
+    "if": "48.5",
+    "if_5y": "55",
+    "jcr": [
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "2/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "综合性期刊",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "SCIENCE",
+    "abbr": "SCIENCE",
+    "if": "45.8",
+    "if_5y": "49.7",
+    "jcr": [
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "3/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "综合性期刊",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "ADVANCES IN PHYSICS",
+    "abbr": "ADV PHYS",
+    "if": "13.8",
+    "if_5y": "43.5",
+    "jcr": [
+      {
+        "cat": "PHYSICS, CONDENSED MATTER",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "6/79"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：凝聚态物理",
+          "name_en": "PHYSICS, CONDENSED MATTER",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "是"
+    }
+  },
+  {
+    "name": "npj Quantum Information",
+    "abbr": "NPJ QUANTUM INFORM",
+    "if": "8.3",
+    "if_5y": "9.4",
+    "jcr": [
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "29/187"
+      },
+      {
+        "cat": "PHYSICS, ATOMIC, MOLECULAR & CHEMICAL",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "1/39"
+      },
+      {
+        "cat": "PHYSICS, CONDENSED MATTER",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "14/79"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "3/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "1区"
+        },
+        {
+          "name": "物理：原子、分子和化学物理",
+          "name_en": "PHYSICS, ATOMIC, MOLECULAR & CHEMICAL",
+          "sec": "1区"
+        },
+        {
+          "name": "物理：凝聚态物理",
+          "name_en": "PHYSICS, CONDENSED MATTER",
+          "sec": "2区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "2区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Frontiers of Physics",
+    "abbr": "FRONT PHYS-BEIJING",
+    "if": "5.3",
+    "if_5y": "5.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "20/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Physical Review Applied",
+    "abbr": "PHYS REV APPL",
+    "if": "4.4",
+    "if_5y": "4.5",
+    "jcr": [
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "56/187"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Nature Computational Science",
+    "abbr": "NAT COMPUT SCI",
+    "if": "18.3",
+    "if_5y": "17.6",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "2/175"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "2/147"
+      },
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "7/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：跨学科应用",
+          "name_en": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+          "sec": "1区"
+        },
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "1区"
+        },
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Annals of Physics",
+    "abbr": "ANN PHYS-NEW YORK",
+    "if": "3",
+    "if_5y": "3",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "34/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "COMMUNICATIONS IN MATHEMATICAL PHYSICS",
+    "abbr": "COMMUN MATH PHYS",
+    "if": "2.6",
+    "if_5y": "2.7",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MATHEMATICAL",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "10/61"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：数学物理",
+          "name_en": "PHYSICS, MATHEMATICAL",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "IEEE TRANSACTIONS ON COMPUTERS",
+    "abbr": "IEEE T COMPUT",
+    "if": "3.8",
+    "if_5y": "3.7",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "16/60"
+      },
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "119/366"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：硬件",
+          "name_en": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+          "sec": "2区"
+        },
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "INTERNATIONAL JOURNAL OF QUANTUM INFORMATION",
+    "abbr": "INT J QUANTUM INF",
+    "if": "0.8",
+    "if_5y": "0.8",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "111/147"
+      },
+      {
+        "cat": "PHYSICS, MATHEMATICAL",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "52/61"
+      },
+      {
+        "cat": "PHYSICS, PARTICLES & FIELDS",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "27/31"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "24/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        },
+        {
+          "name": "物理：数学物理",
+          "name_en": "PHYSICS, MATHEMATICAL",
+          "sec": "4区"
+        },
+        {
+          "name": "物理：粒子与场物理",
+          "name_en": "PHYSICS, PARTICLES & FIELDS",
+          "sec": "4区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "JOURNAL OF COMPUTER AND SYSTEM SCIENCES",
+    "abbr": "J COMPUT SYST SCI",
+    "if": "0.9",
+    "if_5y": "1.1",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "54/60"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "102/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "2区"
+        },
+        {
+          "name": "计算机：硬件",
+          "name_en": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "JOURNAL OF HIGH ENERGY PHYSICS",
+    "abbr": "J HIGH ENERGY PHYS",
+    "if": "5.5",
+    "if_5y": "5.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, PARTICLES & FIELDS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "6/31"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：粒子与场物理",
+          "name_en": "PHYSICS, PARTICLES & FIELDS",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "JOURNAL OF PHYSICS-CONDENSED MATTER",
+    "abbr": "J PHYS-CONDENS MAT",
+    "if": "2.6",
+    "if_5y": "2.5",
+    "jcr": [
+      {
+        "cat": "PHYSICS, CONDENSED MATTER",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "42/79"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：凝聚态物理",
+          "name_en": "PHYSICS, CONDENSED MATTER",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "JOURNAL OF THE ACM",
+    "abbr": "J ACM",
+    "if": "2.5",
+    "if_5y": "3.3",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "34/60"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "142/258"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "60/128"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "56/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：硬件",
+          "name_en": "COMPUTER SCIENCE, HARDWARE & ARCHITECTURE",
+          "sec": "2区"
+        },
+        {
+          "name": "计算机：信息系统",
+          "name_en": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+          "sec": "2区"
+        },
+        {
+          "name": "计算机：软件工程",
+          "name_en": "COMPUTER SCIENCE, SOFTWARE ENGINEERING",
+          "sec": "2区"
+        },
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "JOURNAL OF THE LONDON MATHEMATICAL SOCIETY-SECOND SERIES",
+    "abbr": "J LOND MATH SOC",
+    "if": "1.2",
+    "if_5y": "1.2",
+    "jcr": [
+      {
+        "cat": "MATHEMATICS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "84/483"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "数学",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "数学",
+          "name_en": "MATHEMATICS",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Nature Reviews Physics",
+    "abbr": "NAT REV PHYS",
+    "if": "39.5",
+    "if_5y": "53.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "1/187"
+      },
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "2/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "1区"
+        },
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "是"
+    }
+  },
+  {
+    "name": "NEW JOURNAL OF PHYSICS",
+    "abbr": "NEW J PHYS",
+    "if": "2.8",
+    "if_5y": "3.1",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "38/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PARALLEL COMPUTING",
+    "abbr": "PARALLEL COMPUT",
+    "if": "2.1",
+    "if_5y": "1.5",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "63/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Physical Review X",
+    "abbr": "PHYS REV X",
+    "if": "15.7",
+    "if_5y": "15.4",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "6/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "QUANTUM INFORMATION & COMPUTATION",
+    "abbr": "QUANTUM INF COMPUT",
+    "if": "0.8",
+    "if_5y": "0.8",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "111/147"
+      },
+      {
+        "cat": "PHYSICS, MATHEMATICAL",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "52/61"
+      },
+      {
+        "cat": "PHYSICS, PARTICLES & FIELDS",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "27/31"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q4",
+        "rank": "24/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        },
+        {
+          "name": "物理：数学物理",
+          "name_en": "PHYSICS, MATHEMATICAL",
+          "sec": "4区"
+        },
+        {
+          "name": "物理：粒子与场物理",
+          "name_en": "PHYSICS, PARTICLES & FIELDS",
+          "sec": "4区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Quantum Information Processing",
+    "abbr": "QUANTUM INF PROCESS",
+    "if": "2.2",
+    "if_5y": "2.2",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MATHEMATICAL",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "14/61"
+      },
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "46/114"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "18/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：数学物理",
+          "name_en": "PHYSICS, MATHEMATICAL",
+          "sec": "3区"
+        },
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "3区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "REVIEWS OF MODERN PHYSICS",
+    "abbr": "REV MOD PHYS",
+    "if": "44.8",
+    "if_5y": "56.3",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "1/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "是"
+    }
+  },
+  {
+    "name": "SIAM JOURNAL ON COMPUTING",
+    "abbr": "SIAM J COMPUT",
+    "if": "1.6",
+    "if_5y": "2.1",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "74/147"
+      },
+      {
+        "cat": "MATHEMATICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "98/343"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "2区"
+        },
+        {
+          "name": "应用数学",
+          "name_en": "MATHEMATICS, APPLIED",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "SIAM JOURNAL ON DISCRETE MATHEMATICS",
+    "abbr": "SIAM J DISCRETE MATH",
+    "if": "1",
+    "if_5y": "1",
+    "jcr": [
+      {
+        "cat": "MATHEMATICS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "129/483"
+      },
+      {
+        "cat": "MATHEMATICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q3",
+        "rank": "192/343"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "数学",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "数学",
+          "name_en": "MATHEMATICS",
+          "sec": "2区"
+        },
+        {
+          "name": "应用数学",
+          "name_en": "MATHEMATICS, APPLIED",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PROGRESS IN QUANTUM ELECTRONICS",
+    "abbr": "PROG QUANT ELECTRON",
+    "if": "12.5",
+    "if_5y": "13.6",
+    "jcr": [
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "10/366"
+      },
+      {
+        "cat": "OPTICS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "8/125"
+      },
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "13/187"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "1/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "2区"
+        },
+        {
+          "name": "光学",
+          "name_en": "OPTICS",
+          "sec": "2区"
+        },
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "2区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "是"
+    }
+  },
+  {
+    "name": "EPJ Quantum Technology",
+    "abbr": "EPJ QUANTUM TECHNOL",
+    "if": "5.6",
+    "if_5y": "6.4",
+    "jcr": [
+      {
+        "cat": "OPTICS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "22/125"
+      },
+      {
+        "cat": "PHYSICS, ATOMIC, MOLECULAR & CHEMICAL",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "4/39"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "6/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "光学",
+          "name_en": "OPTICS",
+          "sec": "2区"
+        },
+        {
+          "name": "物理：原子、分子和化学物理",
+          "name_en": "PHYSICS, ATOMIC, MOLECULAR & CHEMICAL",
+          "sec": "2区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "npj Quantum Materials",
+    "abbr": "NPJ QUANTUM MATER",
+    "if": "6.2",
+    "if_5y": "5.9",
+    "jcr": [
+      {
+        "cat": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "122/460"
+      },
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "38/187"
+      },
+      {
+        "cat": "PHYSICS, CONDENSED MATTER",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "19/79"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "5/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "1区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "1区"
+        },
+        {
+          "name": "材料科学：综合",
+          "name_en": "MATERIALS SCIENCE, MULTIDISCIPLINARY",
+          "sec": "2区"
+        },
+        {
+          "name": "物理：凝聚态物理",
+          "name_en": "PHYSICS, CONDENSED MATTER",
+          "sec": "2区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "IEEE JOURNAL OF SELECTED TOPICS IN QUANTUM ELECTRONICS",
+    "abbr": "IEEE J SEL TOP QUANT",
+    "if": "5.1",
+    "if_5y": "4.6",
+    "jcr": [
+      {
+        "cat": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "74/366"
+      },
+      {
+        "cat": "OPTICS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "24/125"
+      },
+      {
+        "cat": "PHYSICS, APPLIED",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "45/187"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "8/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "工程技术",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "工程：电子与电气",
+          "name_en": "ENGINEERING, ELECTRICAL & ELECTRONIC",
+          "sec": "3区"
+        },
+        {
+          "name": "光学",
+          "name_en": "OPTICS",
+          "sec": "3区"
+        },
+        {
+          "name": "物理：应用",
+          "name_en": "PHYSICS, APPLIED",
+          "sec": "3区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "3区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "CHINESE JOURNAL OF PHYSICS",
+    "abbr": "CHINESE J PHYS",
+    "if": "4.6",
+    "if_5y": "3.7",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "23/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "2区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "2区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Science Bulletin",
+    "abbr": "SCI BULL",
+    "if": "21.1",
+    "if_5y": "17.6",
+    "jcr": [
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "6/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "综合性期刊",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Science Advances",
+    "abbr": "SCI ADV",
+    "if": "12.5",
+    "if_5y": "14.1",
+    "jcr": [
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "12/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "综合性期刊",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Cryptography",
+    "abbr": null,
+    "if": "2.1",
+    "if_5y": "2.2",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+        "edition": "ESCI",
+        "quartile": "Q3",
+        "rank": "154/258"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "ESCI",
+        "quartile": "Q2",
+        "rank": "63/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：信息系统",
+          "name_en": "COMPUTER SCIENCE, INFORMATION SYSTEMS",
+          "sec": "4区"
+        },
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Algorithms",
+    "abbr": null,
+    "if": "2.1",
+    "if_5y": "2",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE",
+        "edition": "ESCI",
+        "quartile": "Q3",
+        "rank": "131/204"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "ESCI",
+        "quartile": "Q2",
+        "rank": "63/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "工程技术",
+        "sec": "4区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：人工智能",
+          "name_en": "COMPUTER SCIENCE, ARTIFICIAL INTELLIGENCE",
+          "sec": "4区"
+        },
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "Journal of Computational Science",
+    "abbr": "J COMPUT SCI-NETH",
+    "if": "3.7",
+    "if_5y": "3.7",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+        "edition": "SCIE",
+        "quartile": "Q2",
+        "rank": "66/175"
+      },
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "34/147"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "计算机科学",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "3区"
+        },
+        {
+          "name": "计算机：跨学科应用",
+          "name_en": "COMPUTER SCIENCE, INTERDISCIPLINARY APPLICATIONS",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "PHYSICAL REVIEW LETTERS",
+    "abbr": "PHYS REV LETT",
+    "if": "9",
+    "if_5y": "9.1",
+    "jcr": [
+      {
+        "cat": "PHYSICS, MULTIDISCIPLINARY",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "9/114"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "物理：综合",
+          "name_en": "PHYSICS, MULTIDISCIPLINARY",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  },
+  {
+    "name": "ACM Transactions on Quantum Computing",
+    "abbr": "ACM T QUANTUM COMPUT",
+    "if": "6.8",
+    "if_5y": "6.7",
+    "jcr": [
+      {
+        "cat": "COMPUTER SCIENCE, THEORY & METHODS",
+        "edition": "ESCI",
+        "quartile": "Q1",
+        "rank": "13/147"
+      },
+      {
+        "cat": "QUANTUM SCIENCE & TECHNOLOGY",
+        "edition": "ESCI",
+        "quartile": "Q1",
+        "rank": "4/28"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "物理与天体物理",
+        "sec": "3区"
+      },
+      "sub_cat": [
+        {
+          "name": "计算机：理论方法",
+          "name_en": "COMPUTER SCIENCE, THEORY & METHODS",
+          "sec": "4区"
+        },
+        {
+          "name": "量子科技",
+          "name_en": "QUANTUM SCIENCE & TECHNOLOGY",
+          "sec": "4区"
+        }
+      ],
+      "top": "否",
+      "review": "否"
+    }
+  },
+  {
+    "name": "National Science Review",
+    "abbr": "NATL SCI REV",
+    "if": "17.1",
+    "if_5y": "17.7",
+    "jcr": [
+      {
+        "cat": "MULTIDISCIPLINARY SCIENCES",
+        "edition": "SCIE",
+        "quartile": "Q1",
+        "rank": "8/135"
+      }
+    ],
+    "cas": {
+      "major_cat": {
+        "name": "综合性期刊",
+        "sec": "1区"
+      },
+      "sub_cat": [
+        {
+          "name": "综合性期刊",
+          "name_en": "MULTIDISCIPLINARY SCIENCES",
+          "sec": "1区"
+        }
+      ],
+      "top": "是",
+      "review": "否"
+    }
+  }
+]
